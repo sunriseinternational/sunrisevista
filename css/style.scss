@@ -29,6 +29,10 @@ header{
     z-index: 1;   
 }
 
+.hidden{
+    display: none;
+}
+
 .scrolled{
     background-color: #dbe5f7 !important;
     transition: background-color 500ms linear;

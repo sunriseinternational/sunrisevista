@@ -80,7 +80,7 @@ var captionText = document.getElementById("caption");
 // modal event only happen when click outside the form elements
 $("#map").click(function (event) {
     $target = $(event.target);
-    if (!$target.closest('#name').length && !$target.closest('#email').length && !$target.closest('#meassage').length && !$target.closest('#submitbtn').length) {
+    if (!$target.closest('#name').length && !$target.closest('#email').length && !$target.closest('#message').length && !$target.closest('#submitbtn').length) {
         modal.style.display = "block";
         modalImg.src = img.src;
         captionText.innerHTML = img.alt;
@@ -91,9 +91,12 @@ $("#map").click(function (event) {
 var span = document.getElementsByClassName("photo-close")[0];
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() { 
-  modal.style.display = "none";
+if (span != undefined){
+    span.onclick = function() { 
+        modal.style.display = "none";
+    }
 }
+
 
 
 // header marque slider
@@ -118,3 +121,47 @@ $(".page-marque").slick({
     autoplaySpeed: 5000,
     asNavFor: '.marque-photo'
 })
+
+
+// retrieve querystring
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+//print messages
+function printMessage(msg){
+    switch(msg){
+        case "empty":{
+            msg = "[Error] All of text boxes are required."
+            break;
+        }
+        case "success":{
+            msg = "[Success] Your message sent."
+            break;
+        }
+        case "fail":{
+            msg = "[Error] Your message fail to send, check back later."
+            break;
+        }
+        default:{
+            msg = "Page not found."
+        }
+    }
+    return msg;
+}
+
+//replace the message
+var msg = getParameterByName('q');
+
+if (msg != "" && msg != null){
+    var message = document.getElementById("emailMessage");
+    if (message != null || message != ""){
+        message.innerHTML = printMessage(msg);
+    }
+}

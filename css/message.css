@@ -1,0 +1,101 @@
+.normal-btn, .primary-btn, .secondary-btn, .third-btn, .fouth-btn, .secondary-white-btn, .warning-btn, .success-btn, .info-btn, .danger-btn {
+  text-decoration: none;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  font-size: 1rem;
+  color: white;
+  border-radius: 0;
+  border: 0;
+}
+
+.primary-btn {
+  color: #CB986C;
+  background-color: #002885;
+}
+
+.secondary-btn {
+  color: #002885;
+  background-color: #CB986C;
+}
+
+.third-btn {
+  color: #002885;
+  background-color: #002441;
+}
+
+.fouth-btn {
+  color: #002885;
+  background-color: #eeeeee;
+}
+
+.secondary-white-btn {
+  color: #CB986C;
+  background-color: #fff;
+}
+
+.warning-btn {
+  color: #CB986C;
+  background-color: #D69E2E;
+}
+
+.success-btn {
+  color: #CB986C;
+  background-color: #38A169;
+}
+
+.info-btn {
+  color: #CB986C;
+  background-color: #5A67D8;
+}
+
+.danger-btn {
+  color: #CB986C;
+  background-color: #E53E3E;
+}
+
+* {
+  line-height: 1.2;
+  margin: 0;
+}
+
+html {
+  color: #CB986C;
+  display: table;
+  font-family: sans-serif;
+  height: 100%;
+  text-align: center;
+  width: 100%;
+  background-color: #eeeeee;
+}
+
+body {
+  display: table-cell;
+  vertical-align: middle;
+  margin: 2em auto;
+}
+
+h1 {
+  color: #002885;
+  font-size: 2em;
+  font-weight: 400;
+}
+
+p {
+  margin: 0 auto;
+  width: 280px;
+}
+
+a {
+  color: #CB986C;
+}
+
+@media only screen and (max-width: 280px) {
+  body,
+  p {
+    width: 95%;
+  }
+  h1 {
+    font-size: 1.5em;
+    margin: 0 0 0.3em;
+  }
+}
+/*# sourceMappingURL=message.css.map */

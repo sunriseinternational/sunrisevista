@@ -439,7 +439,7 @@
       <img src="img/map.PNG" alt="Map of Sunrise Vista Apartments" id="mapPhoto" class="coverImg">
     </div>
 
-    <form action="#" method="post" name="emailform">
+    <form name="emailform">
 
       <div class="container" id="formContainer">
         <div class="margin-bottom-2 txt-al-center">
@@ -459,14 +459,18 @@
             <i class="fas fa-envelope"></i>
             <input id="email" type="text" name="email" placeholder="Enter email address">
           </div>
+
+          <div class="hidden">
+            <input id="captcha" type="text" name="captcha" class="hidden">
+          </div>
           
           <div>
             <i class="fas fa-ellipsis-h"></i>
-            <textarea id="meassage" name="message" cols="30" rows="5" placeholder="Enter your message"></textarea>
+            <textarea id="message" name="message" cols="30" rows="5" placeholder="Enter your message"></textarea>
           </div>
           
           <div class="btn-group txt-al-center">
-            <input type="submit" id="submitbtn" value="Send" class="secondary-white-btn font-upper font-bold">
+            <input type="button" id="submitbtn" value="Send" class="secondary-white-btn font-upper font-bold" onclick="SendYourMail();">
           </div>
   
         </div>
@@ -583,6 +587,7 @@
   <script src="js/plugin/bootstrap.min.js"></script>
   <script src="js/plugin/jquery-ui.min.js"></script>
   <script src="js/plugin/slick.min.js"></script>
+  <script src="js/plugin/SendEmail.js"></script>
   <script src="js/main.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
