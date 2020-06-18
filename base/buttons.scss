@@ -1,0 +1,70 @@
+@import "color";
+@import "breakpoint";
+
+//buttons
+.normal-btn{
+    text-decoration: none;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    font-size: 1rem;
+    color: white;
+    border-radius: 0;
+    border: 0;
+}
+
+.primary-btn{
+    @extend .normal-btn;
+    color: $secondaryColor;
+    background-color: $primaryColor;
+}
+
+.secondary-btn{
+    @extend .normal-btn;
+    color: $primaryColor;
+    background-color: $secondaryColor;
+   
+}
+
+.third-btn{
+    @extend .normal-btn;
+    color: $primaryColor;
+    background-color: $thirdColor;
+    
+}
+
+.fouth-btn{
+    @extend .normal-btn;
+    color: $primaryColor;
+    background-color: $fouthColor;
+    
+}
+
+.secondary-white-btn{
+    @extend .normal-btn;
+    color: $secondaryColor;
+    background-color: #fff;
+}
+
+.warning-btn{
+    @extend .normal-btn;
+    color: $secondaryColor;
+    background-color: $warningColor;
+}
+
+.success-btn{
+    @extend .normal-btn;
+    color: $secondaryColor;
+    background-color: $successColor;
+}
+
+
+.info-btn{
+    @extend .normal-btn;
+    color: $secondaryColor;
+    background-color: $infoColor;
+}
+
+.danger-btn{
+    @extend .normal-btn;
+    color: $secondaryColor;
+    background-color: $dangerColor;
+}

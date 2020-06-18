@@ -1,0 +1,7 @@
+@import "color";
+@import "breakpoint";
+
+@mixin centerLayout($width) {
+    max-width: $width;
+    margin: 0 auto;
+}

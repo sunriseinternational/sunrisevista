@@ -1,0 +1,296 @@
+@import "color";
+@import "breakpoint";
+@import "layout";
+@import "fonts";
+
+//left 50%, right 50%. square responsive
+.present-box{
+
+    display: flex;
+
+    & .outer{
+        width: 50%;
+
+        &::before{
+            padding-top: (587 / 813) * 100%;
+        }
+        
+
+        > .inner{
+            padding: 3rem;
+            display: grid;
+            align-content: space-around;
+            background-color: $secondaryColor;
+
+            & .present-box-title{
+                align-self: start;
+                color: #81E6D9;
+            }
+
+            & .present-box-text{
+                color: $fouthColor;
+            }
+        }
+
+        
+    }
+
+    & .present-box-img{
+
+        >.inner{
+            padding: 0;
+            display: block;
+
+            & img:nth-child(2){
+                width: 170px;
+                height: 170px;
+                background-color: white;
+                object-fit: contain;
+                padding: 1rem;
+            }
+
+            
+        }
+        
+    }
+
+    & .testimonial-img{
+        & img:nth-child(2){
+            width: 100% !important;
+            height: 100% !important;
+            background-color: none !important;
+            object-fit: cover !important;
+            padding: 0 !important;
+        }       
+    }
+}
+
+
+//full width, full height
+.full-present-box{
+
+    display: flex;
+    flex-wrap: wrap-reverse;
+    height: 100vh;
+
+    & .full-present-left, .full-present-right{
+        width: 50%;
+    }
+    
+    & h1, h3{
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    & h3{
+        color: $secondaryColor;
+    }
+
+    & span{
+        color: $fouthColor;
+    }
+
+    & .full-present-left{ 
+        padding: 5rem;
+        padding-top: calc(111.41px + 5rem);
+        display: grid;
+        grid-row-gap: 3rem;
+        height: 100%;
+
+        > div:last-of-type{
+
+            & ul{
+                display: flex;
+                flex-wrap: wrap;
+                padding: 0;
+
+                > li{
+                    margin-right: 2rem;
+
+                    &:last-of-type{
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+
+// point present box with checkmarks, bullet point 
+.point-present-box{
+    
+    display: flex;
+    @include centerLayout(1280px);
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include media("<1230px"){
+
+        & .point-present-box-item{
+            &:nth-child(1){
+                margin-right: 0 !important;
+                width: 100%;
+                max-width: none !important;
+                max-height: 600px;
+                margin-bottom: 5rem;
+            }
+
+            &:nth-child(2){
+                width: 100%;
+                
+            }
+        }
+    }
+
+    & .point-present-box-item{
+
+        & h3{
+            color: $secondaryColor;
+            text-transform: uppercase;
+        }
+
+        & button{
+            text-transform: uppercase;
+        }
+
+        &:nth-child(2){
+            display: grid;
+            padding: 3rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &:nth-child(1){
+            max-width: 600px;
+            width: 100%;
+            margin-right: 5rem;
+        }
+
+        & .present-box-row{
+
+            & .flex{
+
+                margin-bottom: 2rem;
+
+                > .point-present-box-btn{
+                    margin-right: 2rem;
+                    margin-top: 2rem;
+
+                    > button{
+                        border-radius: 6px;
+                        &::before{
+                            @include fontAwesome(f0ca);
+                            margin-right: 1rem;
+                        }
+                    }
+                    
+
+                    &:last-of-type{
+                        margin-right: 0;
+
+                        > button{
+                            &::before{
+                                @include fontAwesome(f059);
+                            }
+                        }
+                    }
+                }
+            }
+
+            & ul{
+                padding: 0;
+
+                > li{
+                    margin-bottom: 2rem;
+                    color: $fouthColor;
+
+                    &::before{
+                        @include fontAwesome(f560);
+                        padding-right: 2rem;
+                        color: $secondaryColor;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.button-box{
+
+    text-align: center;
+    background-color: $secondaryColor;
+    padding: 10rem;
+
+    & .button-box-content{
+        margin-bottom: 5rem;
+        color: $fouthColor;
+    }
+
+    & a{
+        text-transform: uppercase;
+    }
+
+
+}
+
+.image-selection-box{
+
+    padding: 5rem;
+
+    padding-top: calc(111.41px + 5rem);
+    text-align: center;
+    color: $fouthColor;
+    max-width: 1920px;
+    margin: 0 auto;
+
+    & .image-selection-box-title{
+        margin-bottom: 3rem;
+
+        & h1{
+            text-transform: uppercase;
+            color: $fouthColor;
+        }
+    
+        & span{
+            text-transform: capitalize;
+            color: $secondaryColor;
+        }
+    }
+    
+
+    & .selection-box-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-row-gap: 2rem;
+        grid-column-gap: 2rem;
+
+        & .selection-box{
+            max-width: 565px;
+            & .outer{
+                
+                > .inner{
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+
+    & ul{
+        padding: 0;
+        display: flex;
+        text-align: left;
+        flex-wrap: wrap;
+
+        > li{
+            padding: 1rem 2rem;
+            background: $infoColor;
+            color: $fouthColor;
+            border-radius: 5px;
+            margin-right: 2rem;
+            margin-bottom: 2rem;
+        }
+    }
+}

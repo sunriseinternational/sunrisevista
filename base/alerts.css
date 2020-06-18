@@ -1,0 +1,33 @@
+.normal-alert, .primary-alert, .secondary-alert, .warning-alert, .success-alert, .info-alert, .danger-alert {
+  padding: .75rem 1.5rem .75rem 1.5rem;
+  font-size: .8rem;
+  color: white;
+  border-radius: .25rem;
+}
+
+.primary-alert {
+  background-color: #002885;
+}
+
+.secondary-alert {
+  color: #002885;
+  background-color: #CB986C;
+}
+
+.warning-alert {
+  background-color: #D69E2E;
+}
+
+.success-alert {
+  background-color: #38A169;
+}
+
+.info-alert {
+  background-color: #5A67D8;
+}
+
+.danger-alert {
+  color: #742A2A;
+  background-color: #E53E3E;
+}
+/*# sourceMappingURL=alerts.css.map */

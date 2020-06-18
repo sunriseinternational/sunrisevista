@@ -1,0 +1,43 @@
+@import "color";
+@import "breakpoint";
+
+//alerts
+.normal-alert{
+    padding: .75rem 1.5rem .75rem 1.5rem;
+    font-size: .8rem;
+    color: white;
+    border-radius: .25rem;
+}
+
+.primary-alert{
+    @extend .normal-alert;
+    background-color: $primaryColor;
+}
+
+.secondary-alert{
+    @extend .normal-alert;
+    color: $primaryColor;
+    background-color: $secondaryColor;
+}
+
+.warning-alert{
+    @extend .normal-alert;
+    background-color: $warningColor;
+}
+
+.success-alert{
+    @extend .normal-alert;
+    background-color: $successColor;
+}
+
+
+.info-alert{
+    @extend .normal-alert;
+    background-color: $infoColor;
+}
+
+.danger-alert{
+    @extend .normal-alert;
+    color: #742A2A;
+    background-color: $dangerColor;
+}

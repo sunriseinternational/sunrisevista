@@ -1,0 +1,31 @@
+.section-nav {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  text-align: center;
+}
+
+.section-nav .section-nav-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.section-nav .section-nav-row:nth-child(1), .section-nav .section-nav-row:nth-child(3) {
+  background-color: #CB986C;
+}
+
+.section-nav .section-nav-row:nth-child(2), .section-nav .section-nav-row:nth-child(4) {
+  background-color: #eeeeee;
+}
+/*# sourceMappingURL=section-nav.css.map */

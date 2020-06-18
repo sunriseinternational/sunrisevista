@@ -1,0 +1,48 @@
+.master-nav-area {
+  position: fixed;
+  background-color: #002885;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  text-transform: uppercase;
+  visibility: hidden;
+  -webkit-transition: all .7s ease;
+  transition: all .7s ease;
+}
+
+.master-nav-area .master-logo > img {
+  width: 250px;
+}
+
+.master-nav-area .master-nav-item > ul, .master-nav-area .master-nav-btn-group > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.master-nav-area .master-nav-item > ul > li, .master-nav-area .master-nav-btn-group > ul > li {
+  margin: 1rem 0;
+  padding: 0 1rem;
+}
+
+.master-nav-area-active {
+  visibility: visible;
+  z-index: 1000;
+  -webkit-transition: all .7s ease;
+  transition: all .7s ease;
+}
+/*# sourceMappingURL=nav-area.css.map */

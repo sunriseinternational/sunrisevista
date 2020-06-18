@@ -1,0 +1,49 @@
+.general-form .general-form-row .general-form-group > input[type="text"], .general-form .general-form-row .general-form-group select, .general-form .general-form-row .general-form-group > textarea {
+  background: transparent;
+  background-color: #eeeeee;
+  border: 0;
+  border-radius: 0;
+  line-height: 1.625rem;
+  padding: .75rem 1.25rem .75rem 1.25rem;
+  width: 100%;
+  outline: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.general-form {
+  width: 100%;
+}
+
+.general-form .general-form-row {
+  margin-bottom: 1rem;
+}
+
+.general-form .general-form-row .general-form-group {
+  display: -ms-grid;
+  display: grid;
+  margin-bottom: .5rem;
+}
+
+.general-form .general-form-row .general-form-group > span {
+  margin-bottom: 1rem;
+}
+
+.general-form .general-form-row .general-form-group > input[type="text"], .general-form .general-form-row .general-form-group select {
+  min-width: 280px;
+  max-height: 50px;
+}
+
+.general-form .general-form-row .general-form-group > select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.general-form .general-form-row .general-form-group > textarea {
+  resize: none;
+  min-width: 280px;
+  white-space: pre-wrap;
+}
+/*# sourceMappingURL=forms.css.map */

@@ -1,0 +1,35 @@
+GENERAL:
+
+xs = very small
+
+sm = small
+
+normal: normal
+
+med: medium
+
+lg: large
+
+xl: extra large
+
+
+COLOR:
+
+colorName = red/pink/purple/blue/green/yellow/teal/indigo/orange/grey/white
+
+[colorName]-[level(max: 9)]
+
+Eg. red-1
+
+
+FONT:
+
+fontSize = xs/sm/normal/med/lg/xl/2xl/3xl/4xl
+
+fontWeight = bold/light/upper/cap/lower
+
+fontStyle = italic/normal
+
+font-[fontSize/fontWeight/fontStyle]
+
+Eg. font-xs

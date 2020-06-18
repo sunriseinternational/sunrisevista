@@ -1,0 +1,39 @@
+.video-marque {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.video-marque .marque-media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+  -o-filter: blur(5px);
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.video-marque .video-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+/*# sourceMappingURL=page-marque.css.map */

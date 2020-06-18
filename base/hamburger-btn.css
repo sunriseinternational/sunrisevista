@@ -1,0 +1,108 @@
+.master-hamburger-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 111.41px;
+  height: 111.41px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #fff;
+  z-index: 1200;
+  cursor: pointer;
+}
+
+.master-hamburger-container .master-ham-btn {
+  display: -ms-grid;
+  display: grid;
+  grid-row-gap: .5rem;
+  width: 30px;
+  height: 30px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: all .7s ease;
+  transition: all .7s ease;
+}
+
+.master-hamburger-container .master-ham-btn #ham-1 {
+  -webkit-transform: translateX(30%);
+          transform: translateX(30%);
+}
+
+.master-hamburger-container .master-ham-btn #ham-1, .master-hamburger-container .master-ham-btn #ham-3 {
+  width: 13px;
+  -webkit-transition: all .7s ease;
+  transition: all .7s ease;
+}
+
+.master-hamburger-container .master-ham-btn #ham-3 {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.master-hamburger-container .master-ham-btn:hover > #ham-1 {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: all .7s ease;
+  transition: all .7s ease;
+}
+
+.master-hamburger-container .master-ham-btn:hover > #ham-3 {
+  -webkit-transform: translateX(30%);
+          transform: translateX(30%);
+  -webkit-transition: all .7s ease;
+  transition: all .7s ease;
+}
+
+.master-hamburger-container .master-ham {
+  width: 30px;
+  height: 3px;
+  background-color: #000;
+}
+
+.master-hamburger-container .master-ham-text {
+  margin-top: .2rem;
+}
+
+.master-btn-active {
+  -webkit-transform: rotate(0) !important;
+          transform: rotate(0) !important;
+  -webkit-transition: all .7s ease;
+  transition: all .7s ease;
+}
+
+.master-ham-1-active {
+  width: 100% !important;
+  -webkit-transform: translate(0) !important;
+          transform: translate(0) !important;
+  -webkit-transform: rotate(45deg) translate(10px, 10px) !important;
+          transform: rotate(45deg) translate(10px, 10px) !important;
+  -webkit-transition: all .7s ease;
+  transition: all .7s ease;
+}
+
+.master-ham-2-active {
+  display: none;
+}
+
+.master-ham-3-active {
+  width: 100% !important;
+  -webkit-transform: translate(0) !important;
+          transform: translate(0) !important;
+  -webkit-transform: rotate(-45deg) translate(3px, -3px) !important;
+          transform: rotate(-45deg) translate(3px, -3px) !important;
+  -webkit-transition: all .7s ease;
+  transition: all .7s ease;
+}
+/*# sourceMappingURL=hamburger-btn.css.map */

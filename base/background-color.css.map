@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAGI,AAAA,KAAK,EAAE,KAAK,CAAA;EACR,gBAAgB,ECKX,OAAO;CDJf",
+    "sources": [
+        "background-color.scss",
+        "_color.scss"
+    ],
+    "names": [],
+    "file": "background-color.css"
+}

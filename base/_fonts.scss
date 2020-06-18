@@ -1,0 +1,14 @@
+@import "color";
+@import "breakpoint";
+@import "layout";
+
+// translate fontawesome string
+@function icon($character){
+    @return unquote('\"') + unquote(str-insert($character,'\\', 1)) + unquote('\"');
+}
+
+@mixin fontAwesome($code) {
+    content: icon($code);
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}

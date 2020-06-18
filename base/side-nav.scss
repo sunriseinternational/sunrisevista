@@ -1,0 +1,85 @@
+@import "color";
+@import "breakpoint";
+
+@mixin sideNav($primaryColor, $secondaryColor, $thirdColor, $fouthColor) {
+    .master-side-nav{
+
+        position: fixed;
+        background-color: rgba($color: $primaryColor, $alpha: .9);
+        width: 300px;
+        height: 100%;
+        top: 0;
+        left: 0;
+
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-row-gap: 1rem;
+        padding: 1.5rem;
+
+        z-index: 999;
+
+        & .master-logo{
+            align-self: start;
+        }
+    
+        & .master-quote{
+
+            align-self: start;
+            
+            & a{
+                padding: 1rem 5rem;
+            } 
+        }
+    
+        & .master-index{
+            
+            display: grid;
+            justify-items: center;
+            grid-row-gap: 3rem;
+
+            & div:nth-child(1){
+                width: 3px;
+                height: 50px;
+                background-color: #fff;
+            }
+
+            & div:nth-child(2){
+                transform: rotate(-90deg);
+                height: 65px;
+
+                >span{
+                    width: 100%;
+                    height: 100%;
+                    display: grid;
+                    align-items: center;
+                }
+            }
+        }
+
+        & .master-social{
+            
+            & div{
+                margin-bottom: 1rem;
+            }
+        }
+
+        & .master-qrcode{
+           
+            align-self: end;
+        }
+    }
+}
+
+@include sideNav($primaryColor, $secondaryColor, $thirdColor, $fouthColor);
+
+
+.child-side-nav{
+    max-width: 300px;
+    padding: 1.5rem;
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}

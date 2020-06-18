@@ -1,0 +1,30 @@
+@import "color";
+@import "breakpoint";
+
+@mixin sectionNav($secondaryColor, $fouthColor) {
+    .section-nav{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        text-align: center;
+
+
+        & .section-nav-row{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        & .section-nav-row:nth-child(1), .section-nav-row:nth-child(3){
+            background-color: $secondaryColor;
+        }
+
+        & .section-nav-row:nth-child(2), .section-nav-row:nth-child(4){
+            background-color: $fouthColor;
+        }
+        
+    }
+}
+
+@include sectionNav($secondaryColor, $fouthColor);

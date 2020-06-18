@@ -1,0 +1,499 @@
+/* Branding */
+.branding{
+    background: #002885;
+    border-bottom: 1px solid rgba(256,256,256,.2);
+}
+
+.b-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 2em;
+}
+.ih-logo{
+    position: relative;
+}
+
+.ih-logo::before{
+    content: '';
+    background-image: url(../img/logo/Inn-Hotels-Official-white.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 36px;
+    position: absolute;
+    z-index: 99;
+}
+
+.ih-logo::after{
+    content: '';
+    background: #002885;
+    width: 120px;
+    height: 36px;
+    position: absolute;
+    z-index: 90;
+    left: -10px;
+}
+
+.childlogo{
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.childlogo img{
+    width: 60px;
+}
+
+.childlogo li{
+    list-style: none;
+    margin-right: 2em;
+}
+
+.childlogo li:last-of-type{
+    margin-right: 0;
+}
+
+.childlogo::before{
+    position: absolute;
+    content: '';
+    width: 95%;
+    height: 100%;
+    border: 1px solid rgba(256,256,256,.2);
+    z-index: -1;
+}
+
+/* Footer area */
+footer{
+    background: #002885;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    color: rgba(256, 256, 256, .9);
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.footer-detail{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.f-detail{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+footer a{
+    text-transform: none !important;
+}
+
+footer span, footer p{
+    font-size: 1rem;
+}
+
+.f-member img{
+    width: 150px;
+}
+
+.f{
+    display: flex;
+    -ms-flex-direction: column;
+    -moz-flex-direction: column;
+    flex-direction: column;
+    padding-left: 1.5em;
+    border-left: 1px solid rgba(256,256,256,.2);
+}
+
+.f-findus{
+    margin-left: 0;
+    border-left: 0;
+    padding-left: 0;
+}
+
+
+
+
+.f:last-of-type{
+    border-right: 0;
+    margin-right: 0;
+}
+
+.f-t{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.f-t:first-of-type{
+    grid-column: span 2;
+}
+
+.f-c a, .f-contact span a, .f-findus-guide{
+    color: rgba(256, 256, 256, .6);
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+}
+
+.f-social-ic{
+    margin-top: .5em;
+    height: 35px;
+    display: flex;
+}
+
+.f-social-icon{
+    width: 35px;
+    height: 35px;
+    margin-right: 1em;
+    overflow: hidden;
+}
+
+
+.f-social-icon i{
+    width: 100%;
+    height: 100%;
+    background: rgba(256,256,256,.08);
+    color: rgba(256,256,256,.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.f-social-icon span{
+    position: absolute;
+    font-size: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    background: rgba(59, 89, 152, 1);
+    color: rgba(256,256,256,1);
+    padding: .5em;
+    margin-top: .5em;
+}
+
+.f-social-twitter span, .f-social-twitter .ic-tooltip::before{
+    background: rgba(56, 161, 243, 1);
+}
+
+.f-social-tripadvisor span, .f-social-tripadvisor .ic-tooltip::before{
+    background: rgba(0, 175, 135, 1);
+}
+
+.f-social-instagram span, .f-social-instagram .ic-tooltip::before{
+    background: rgba(193,53,132, 1);
+}
+
+.f-social-linkedin span, .f-social-linkedin .ic-tooltip::before{
+    background: rgba(0,119,181, 1);
+}
+
+.f-social-icon:hover .ic-tooltip{
+    font-size: 1em;
+    width: auto;
+    height: auto;
+    opacity: 1;
+    transition: .3s ease-in-out;
+}
+
+.ic-tooltip::before{
+    content: '';
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    transform: rotate(45deg);
+    top: -5px;
+    background: rgba(59, 89, 152, 1);
+}
+
+.f-social-icon .fa-facebook-f:after{
+    content: '';
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(59, 89, 152, 1);
+    z-index: -1;
+    transform: translateY(-100%);
+}
+
+.f-social-icon .fa-twitter:after{
+    content: '';
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(56, 161, 243, 1);
+    z-index: -1;
+    transform: translateY(-100%);
+}
+
+.f-social-icon .fa-tripadvisor:after{
+    content: '';
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 175, 135, 1);
+    z-index: -1;
+    transform: translateY(-100%);
+}
+
+.f-social-icon .fa-instagram:after{
+    content: '';
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(193,53,132, 1);
+    z-index: -1;
+    transform: translateY(-100%);
+}
+
+.f-social-icon .fa-linkedin-in:after{
+    content: '';
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,119,181, 1);
+    z-index: -1;
+    transform: translateY(-100%);
+}
+
+.f-social-icon:hover{
+    text-decoration: none;
+}
+
+.f-social-icon:hover i{
+    transition: all .3s ease-in-out;
+    color: rgba(256, 256, 256, 1);
+}
+
+.f-social-icon:hover i:after{
+    transition: all .3s ease-in-out;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.f-social-ic a{
+    margin-right: 1em;
+}
+
+.f-social-ic a:last-of-type{
+    margin-right: 0;
+}
+
+.rights-certificate{
+    text-align: center;
+}
+
+.f-cert img{
+    width: 100px;
+}
+
+hr{
+    border-top: 1px solid rgba(256, 256, 256, 0.1);
+}
+
+.f-ic::before{
+    content: '';
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+    padding-right: .5em;
+}
+
+.f-address::before{
+    content:'\f015';
+}
+
+.f-email:before{
+    content: '\f0e0';
+}
+
+.f-tollfree:before{
+    content: '\f6b6';
+    padding-right: .4em;
+}
+
+.f-phone:before{
+    content: '\f879';
+}
+
+.f-sales:before{
+    content: '\f590';
+}
+
+.f-weddings:before{
+    content: '\f70b';
+}
+
+.f-ic{
+    position: relative;
+}
+
+.tooltip{
+    opacity: 0;
+    width: fit-content;
+    position: absolute;
+    left: 75%;
+    bottom: 0;
+    background: white;
+    color: black;
+    z-index: 2;
+    padding: .2em;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.f-ic:hover .tooltip{
+    opacity: 1;
+    transition: all .5s ease-in-out; 
+}
+
+.tooltip:before{
+    content: '';
+    width: 5px;
+    height: 5px;
+    background: white;
+    transform: translateY(-50%) rotate(45deg);
+    position: absolute;
+    left: -10px;
+    top: 50%;
+}
+
+.f-copyrights{
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+    color: rgba(256, 256, 256, .6);
+}
+
+.f-terms a{
+    margin-right: .5em;
+    color: rgba(256, 256, 256, .6);
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+}
+
+.f-ic{
+    color: rgba(256, 256, 256, .6);
+}
+
+.f-findus-guide:hover{
+    color: rgba(256, 256, 256, .6);
+}
+
+.f-findus-guide::before{
+    content: '\f56d';
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+    padding-right: .5em;
+}
+
+@media only screen and (min-width: 1181px){
+    .childlogo::before{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    .childlogo{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        justify-items: initial;
+    }
+
+    .childlogo li{
+        margin-right: 0;
+    }
+
+    .childlogo::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+}
+
+@media only screen and (max-width: 860px){
+    .f{
+        padding-left: 1em;
+    }
+    .f:first-of-type{
+        padding-left: 0;
+    }
+}
+
+
+@media only screen and (max-width: 779px){
+    .f-detail{
+        grid-template-columns: 1fr 1fr;
+        justify-items: initial;
+    }
+
+    .f{
+        padding-left: 1em;
+        margin-bottom: 1em;
+    }
+
+    .f-findus, .f-link{
+        margin-right: 1em;
+        padding-left: 0;
+        border: none;
+    }
+}
+
+@media only screen and (max-width: 540px){
+    .f-copyrights{
+        display: block;
+        margin-bottom: 1em;
+    }
+}
+
+
+@media only screen and (max-width: 430px){
+    .childlogo {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .f-detail {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .f {
+        padding-left: 0;
+        border: none;
+    }
+    
+}
+
+@media only screen and (max-width: 330px){
+    .childlogo {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .nav-area-item a{
+        font-size: 1em;
+    }
+}

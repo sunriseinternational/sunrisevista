@@ -1,0 +1,1449 @@
+//==============================================================
+// CreativeMITE Base Library | version 1.0 | Huang Zhou
+// Search by SINDEX || "SCM-{name}"
+
+
+//imports
+@import "color";
+@import "size";
+@import "breakpoint";
+
+//==============================================================
+
+
+//==============================================================
+// Universal Placeholder Style | DO NOT CHANGE
+//--------------------------------------------------------------
+%flex{
+    display: flex;
+}
+
+%grid{
+    display: grid;
+}
+
+%coverImg{
+    @extend .w-100p;
+    @extend .h-100p;
+    @extend .obj-fit-cover;
+}
+
+//==============================================================
+
+//SINDEX | COLORS
+
+//==============================================================
+// Universal color
+//--------------------------------------------------------------
+
+.primaryColor{
+    color: $primaryColor; 
+}
+
+.secondaryColor{
+    color: $secondaryColor; 
+}
+
+.thirdColor{
+    color: $thirdColor; 
+}
+
+.fouthColor{
+    color: $fouthColor; 
+}
+
+.warningColor{
+    color: $warningColor;
+}
+
+.successColor{
+    color: $successColor;
+}
+
+.dangerColor{
+    color: $dangerColor;
+}
+
+.infoColor{
+    color: $infoColor;
+}
+
+.twitterColor{
+    color: $twitterColor;
+}
+
+.facebookColor{
+    color: $facebookColor;
+}
+
+.linkedinColor{
+    color: $linkedinColor;
+}
+
+@mixin color($name, $value) {
+    .#{$name} {
+        color: $value !important;
+    }    
+}
+
+//red
+@include color("red-1", #FFF5F5);
+@include color("red-2", #FED7D7);
+@include color("red-3", #FEB2B2);
+@include color("red-4", #FC8181);
+@include color("red-5", #F56565);
+@include color("red-6", #E53E3E);
+@include color("red-7", #C53030);
+@include color("red-8", #9B2C2C);
+@include color("red-9", #742A2A);
+
+//pink
+@include color("pink-1", #FFF5F7);
+@include color("pink-2", #FED7E2);
+@include color("pink-3", #FBB6CE);
+@include color("pink-4", #F687B3);
+@include color("pink-5", #ED64A6);
+@include color("pink-6", #D53F8C);
+@include color("pink-7", #B83280);
+@include color("pink-8", #97266D);
+@include color("pink-9", #702459);
+
+//purple
+@include color("purple-1", #FAF5FF);
+@include color("purple-2", #FED7E2);
+@include color("purple-3", #E9D8FD);
+@include color("purple-4", #B794F4);
+@include color("purple-5", #9F7AEA);
+@include color("purple-6", #805AD5);
+@include color("purple-7", #6B46C1);
+@include color("purple-8", #553C9A);
+@include color("purple-9", #44337A);
+
+//blue
+@include color("blue-1", #EBF8FF);
+@include color("blue-2", #BEE3F8);
+@include color("blue-3", #90CDF4);
+@include color("blue-4", #63B3ED);
+@include color("blue-5", #4299E1);
+@include color("blue-6", #3182CE);
+@include color("blue-7", #2B6CB0);
+@include color("blue-8", #2C5282);
+@include color("blue-9", #2A4365);
+
+//green
+@include color("green-1", #F0FFF4);
+@include color("green-2", #C6F6D5);
+@include color("green-3", #9AE6B4);
+@include color("green-4", #68D391);
+@include color("green-5", #48BB78);
+@include color("green-6", #38A169);
+@include color("green-7", #2F855A);
+@include color("green-8", #276749);
+@include color("green-9", #22543D);
+
+//yellow
+@include color("yellow-1", #FFFFF0);
+@include color("yellow-2", #FEFCBF);
+@include color("yellow-3", #FAF089);
+@include color("yellow-4", #F6E05E);
+@include color("yellow-5", #ECC94B);
+@include color("yellow-6", #D69E2E);
+@include color("yellow-7", #B7791F);
+@include color("yellow-8", #975A16);
+@include color("yellow-9", #744210);
+
+//teal
+@include color("teal-1", #E6FFFA);
+@include color("teal-2", #B2F5EA);
+@include color("teal-3", #81E6D9);
+@include color("teal-4", #4FD1C5);
+@include color("teal-5", #38B2AC);
+@include color("teal-6", #319795);
+@include color("teal-7", #2C7A7B);
+@include color("teal-8", #285E61);
+@include color("teal-9", #234E52);
+
+//indigo
+@include color("indigo-1", #EBF4FF);
+@include color("indigo-2", #C3DAFE);
+@include color("indigo-3", #A3BFFA);
+@include color("indigo-4", #7F9CF5);
+@include color("indigo-5", #667EEA);
+@include color("indigo-6", #5A67D8);
+@include color("indigo-7", #4C51BF);
+@include color("indigo-8", #4C51BF);
+@include color("indigo-9", #3C366B);
+
+//orange
+@include color("orange-1", #FFFAF0);
+@include color("orange-2", #FEEBC8);
+@include color("orange-3", #FBD38D);
+@include color("orange-4", #F6AD55);
+@include color("orange-5", #ED8936);
+@include color("orange-6", #DD6B20);
+@include color("orange-7", #C05621);
+@include color("orange-8", #9C4221);
+@include color("orange-9", #7B341E);
+
+//grey
+@include color("grey-1", #F7FAFC);
+@include color("grey-2", #EDF2F7);
+@include color("grey-3", #E2E8F0);
+@include color("grey-4", #CBD5E0);
+@include color("grey-5", #A0AEC0);
+@include color("grey-6", #718096);
+@include color("grey-7", #4A5568);
+@include color("grey-8", #2D3748);
+@include color("grey-9", #1A202C);
+
+//white
+@include color("white-1", #FFF);
+@include color("white-2", #F2F2F2);
+@include color("white-3", #F3F3F3);
+@include color("white-4", #F4F4F4);
+@include color("white-5", #F5F5F5);
+@include color("white-6", #F6F6F6);
+@include color("white-7", #F7F7F7);
+@include color("white-8", #F8F8F8);
+@include color("white-9", #F9F9F9);
+
+//==============================================================
+
+//SINDEX | SCM-FONT
+
+//==============================================================
+// Universal Font
+//--------------------------------------------------------------
+
+@mixin font ($name, $size, $weight, $txtTransform, $isItalic) {
+    .font-#{$name} {
+        font-size: $size;
+        font-weight: $weight;
+        text-transform: $txtTransform;
+        font-style: $isItalic;
+    }
+}
+
+//font size
+@include font("xs", $xdot75, null, null, null);
+@include font("sm", $xdot8, null, null, null);
+@include font("normal", $x1, null, null, null);
+@include font("med", $x1dot25, null, null, null);
+@include font("lg", $x1dot5, null, null, null);
+@include font("xl", $x2, null, null, null);
+@include font("2xl", $x3, null, null, null);
+@include font("3xl", $x4, null, null, null);
+@include font("4xl", $x5, null, null, null);
+
+//font status
+@include font("bold", null, bolder, null, null);
+@include font("light", null, lighter, null, null);
+@include font("upper", null, null, uppercase, null);
+@include font("cap", null, null, capitalize, null);
+@include font("lower", null, null, lowercase, null);
+
+//font style
+@include font("italic", null, null, null, italic);
+@include font("normal", null, null, null, normal);
+
+
+//==============================================================
+
+//SINDEX | SCM-TEXT
+
+//==============================================================
+// Universal Text | Could Update.
+//--------------------------------------------------------------
+
+@mixin textAlignment ($name, $alignment) {
+    .txt-al-#{$name} {
+        text-align: $alignment;
+    }
+}
+
+@include textAlignment("center", center);
+@include textAlignment("left", left);
+@include textAlignment("right", right);
+@include textAlignment("justify", justify);
+
+//==============================================================
+
+//SINDEX | SCM-BOX
+
+//==============================================================
+// Universal Box | Could Update.
+//--------------------------------------------------------------
+
+.box-shadow{
+    box-shadow: rgba(57, 70, 78, 0.15) 0px 0px 1px 0px, rgba(57, 70, 78, 0.25) 0px 20px 55px -8px;
+}
+
+//==============================================================
+
+//SINDEX | SCM-OBJECT
+
+//==============================================================
+// Universal Object
+//--------------------------------------------------------------
+
+@mixin object ($name, $fit) {
+    .obj-fit-#{$name} {
+        object-fit: $fit;
+    }
+}
+
+@include object("cover", cover);
+@include object("contain", contain);
+@include object("fill", fill);
+@include object("scale-down", scale-down);
+@include object("none", none);
+
+//==============================================================
+
+//SINDEX | SCM-OVERFLOW
+
+//==============================================================
+// Universal Overflow
+//--------------------------------------------------------------
+
+@mixin overflow ($name, $overflow, $axis, $axisFlow) {
+    .overflow-#{$name} {
+        overflow: $overflow;
+        overflow-#{$axis}: $axisFlow;
+    }
+}
+
+@include overflow("auto", auto, null, null);
+@include overflow("hidden", hidden, null, null);
+@include overflow("visible", visible, null, null);
+@include overflow("scroll", scroll, null, null);
+
+@include overflow("x-hidden", null, "x", hidden);
+@include overflow("x-visible", null, "x", visible);
+@include overflow("x-scroll", null, "x", scroll);
+
+@include overflow("y-hidden", null, "y", hidden);
+@include overflow("y-visible", null, "y", visible);
+@include overflow("y-scroll", null, "y", scroll);
+
+//==============================================================
+
+//SINDEX | SCM-POSITION
+
+//==============================================================
+// Universal Position
+//--------------------------------------------------------------
+
+@mixin position ($name, $position) {
+    .position-#{$name} {
+        position: $position;
+    }
+}
+
+@include position("relative", relative);
+@include position("static", static);
+@include position("absolute", absolute);
+@include position("fixed", fixed);
+//not support on IE11
+@include position("sticky", sticky);
+
+//==============================================================
+
+//SINDEX | SCM-PLACEMENT
+
+//==============================================================
+// Universal Placement
+//--------------------------------------------------------------
+
+@mixin placement ($name, $top, $left, $bottom, $right) {
+    .#{$name} {
+        top: $top;
+        left: $left;
+        bottom: $bottom;
+        right: $right;
+    }
+}
+
+@include placement("full-0", 0, 0, 0, 0);
+//Left and Right
+@include placement("full-x", null, 0, null, 0);
+//Top and Bottom
+@include placement("full-y", 0, null, 0, null);
+@include placement("top-0", 0, null, null, null);
+@include placement("left-0", null, 0, null, null);
+@include placement("bottom-0", null, null, 0, null);
+@include placement("right-0", null, null, null, 0);
+
+//==============================================================
+
+//SINDEX | SCM-Z-INDEX
+
+//==============================================================
+// Universal Z-Index | Could Update
+//--------------------------------------------------------------
+
+@mixin zIndex ($name, $value) {
+    .z-#{$name} {
+        z-index: $value;
+    }
+}
+
+@include zIndex("mi-10", -10);
+@include zIndex("mi-1", -1);
+@include zIndex("0", 0);
+@include zIndex("1", 1);
+@include zIndex("10", 10);
+@include zIndex("20", 20);
+@include zIndex("30", 30);
+//Normaly use for navigation bar
+@include zIndex("999", 999);
+
+//==============================================================
+
+//SINDEX | SCM-DISPLAY
+
+//==============================================================
+// Universal Display 
+//--------------------------------------------------------------
+
+@mixin display ($name, $value) {
+    .#{$name} {
+        display: $value;
+    }
+}
+
+//Item will not take the space
+@include display("none", none);
+@include display("block", block);
+@include display("table", table);
+@include display("inline", inline);
+@include display("inline-block", inline-block);
+@include display("inline-flex", inline-flex);
+@include display("inline-grid", inline-grid);
+
+//==============================================================
+
+//SINDEX | SCM-VISIBILITY
+
+//==============================================================
+// Universal Visibility | with opacity animation 
+//--------------------------------------------------------------
+
+@mixin visibility ($name, $value, $opacity, $time, $transition) {
+    .#{$name} {
+        visibility: $value;
+        opacity: $opacity;
+        transition: opacity #{$time}s #{$transition};
+    }
+}
+
+//Item will still take space
+@include visibility("hidden", hidden, 0, .7, ease);
+@include visibility("visible", visible, 1, .7, ease);
+
+//==============================================================
+
+//SINDEX | SCM-FLEX
+
+//==============================================================
+// Universal Flex Box Layout
+//--------------------------------------------------------------
+@mixin flexbox($justify, $align, $direction, $wrap, $alignContent) {
+    @extend %flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    align-content: $alignContent;
+}
+
+.flex{
+    @extend %flex;
+
+    // Flex justify
+    &-jf-start {
+        @include flexbox(flex-start, null, null, null, null);
+    }
+
+    &-jf-end {
+        @include flexbox(flex-end, null, null, null, null);
+    }
+
+    &-jf-center {
+        @include flexbox(center, null, null, null, null);
+    }
+
+    &-jf-between {
+        @include flexbox(space-between, null, null, null, null);
+    }
+
+    &-jf-around {
+        @include flexbox(space-around, null, null, null, null);
+    }
+
+    // Flex align-items
+    &-al-center {
+        @include flexbox(null, center, null, null, null);
+    }
+
+    &-al-start {
+        @include flexbox(null, flex-start, null, null, null);
+    }
+
+    &-al-end {
+        @include flexbox(null, flex-end, null, null, null);
+    }
+
+    &-al-stretch {
+        @include flexbox(null, stretch, null, null, null);
+    }
+
+    &-al-baseline {
+        @include flexbox(null, baseline, null, null, null);
+    }
+
+    // Flex direction
+    &-column {
+        @include flexbox(null, null, column, null, null);
+    }
+
+    &-row {
+        @include flexbox(null, null, row, null, null);
+    }
+
+    &-column-reverse {
+        @include flexbox(null, null, column-reverse, null, null);
+    }
+
+    &-row-reverse {
+        @include flexbox(null, null, row-reverse, null, null);
+    }
+
+    // Flex wrap
+    &-wrap-no {
+        @include flexbox(null, null, null, nowrap, null);
+    }
+
+    &-wrap {
+        @include flexbox(null, null, null, wrap, null);
+    }
+
+    &-wrap-reverse {
+        @include flexbox(null, null, null, wrap-reverse, null);
+    }
+
+    // Flex align-content
+    &-content-al-start {
+        @include flexbox(null, null, null, null, flex-start);
+    }
+
+    &-content-al-end {
+        @include flexbox(null, null, null, null, flex-end);
+    }
+
+    &-content-al-center {
+        @include flexbox(null, null, null, null, center);
+    }
+
+    &-content-al-stretch {
+        @include flexbox(null, null, null, null, stretch);
+    }
+
+    &-content-al-between {
+        @include flexbox(null, null, null, null, space-between);
+    }
+
+    &-content-al-around {
+        @include flexbox(null, null, null, null, space-around);
+    }
+}
+//==============================================================
+
+//SINDEX | SCM-GRID
+
+//==============================================================
+// Universal Grid Layout
+//--------------------------------------------------------------
+@mixin grid($justify, $align, $columnGap, $rowGap) {
+    @extend %grid;
+    justify-items: $justify;
+    align-items: $align;
+    grid-column-gap: $columnGap;
+    grid-row-gap: $rowGap;
+}
+
+.grid{
+    @extend %grid;
+
+    // Grid justify items
+    &-jf-start {
+        @include grid(start, null, null, null);
+    }
+
+    &-jf-end {
+        @include grid(end, null, null, null);
+    }
+
+    &-jf-center {
+        @include grid(center, null, null, null);
+    }
+
+    &-jf-stretch {
+        @include grid(stretch, null, null, null);
+    }
+
+    // Grid align items
+    &-al-center {
+        @include grid(null, center, null, null);
+    }
+
+    &-al-start {
+        @include grid(null, start, null, null);
+    }
+
+    &-al-end {
+        @include grid(null, end, null, null);
+    }
+
+    &-al-stretch {
+        @include grid(null, stretch, null, null);
+    }
+
+    // Grid row gap
+    &-row-1 {
+        @include grid(null, null, $x1, null);
+    }
+
+    &-row-2 {
+        @include grid(null, null, $x2, null);
+    }
+
+    &-row-3 {
+        @include grid(null, null, $x3, null);
+    }
+
+    &-row-4 {
+        @include grid(null, null, $x4, null);
+    }
+    
+    // Grid row gap
+    &-row-1 {
+        @include grid(null, null, null, $x1);
+    }
+
+    &-row-2 {
+        @include grid(null, null, null, $x2);
+    }
+
+    &-row-3 {
+        @include grid(null, null, null, $x3);
+    }
+
+    &-row-4 {
+        @include grid(null, null, null, $x4);
+    }
+}
+
+//==============================================================
+
+//SINDEX | SCM-SPACING
+
+//==============================================================
+// Universal Spacing 
+//--------------------------------------------------------------
+
+    //===PADDING ALL DIRECTION===//
+    @mixin padding ($name, $value) {
+        .padding-#{$name} {
+            padding: $value;
+        }
+    }
+
+    @include padding("0", 0);
+    @include padding("0-25", $xdot25);
+    @include padding("0-5", $xdot5);
+    @include padding("0-75", $xdot75);
+    @include padding("0-8", $xdot8);
+    @include padding("1", $x1);
+    @include padding("1-25", $x1dot25);
+    @include padding("1-5", $x1dot5);
+    @include padding("2", $x2);
+    @include padding("2-25", $x2dot25);
+    @include padding("2-5", $x2dot5);
+    @include padding("3", $x3);
+    @include padding("4", $x4);
+    @include padding("5", $x5);
+
+    //===PADDING X & Y===//
+    @mixin paddingAxis ($name, $top, $left, $bottom, $right) {
+        .#{$name} {
+            padding-top: $top;
+            padding-left: $left;
+            padding-bottom: $bottom;
+            padding-right: $right;
+        }
+    }
+
+    //padding left and padding right
+    @include paddingAxis("padding-x-0", null, 0, null, 0);
+    @include paddingAxis("padding-x-0-25", null, $xdot25, null, $xdot25);
+    @include paddingAxis("padding-x-0-5", null, $xdot5, null, $xdot5);
+    @include paddingAxis("padding-x-0-75", null, $xdot75, null, $xdot75);
+    @include paddingAxis("padding-x-0-8", null, $xdot8, null, $xdot8);
+    @include paddingAxis("padding-x-1", null, $x1, null, $x1);
+    @include paddingAxis("padding-x-1-25", null, $x1dot25, null, $x1dot25);
+    @include paddingAxis("padding-x-1-5", null, $x1dot5, null, $x1dot5);
+    @include paddingAxis("padding-x-2", null, $x2, null, $x2);
+    @include paddingAxis("padding-x-2-25", null, $x2dot25, null, $x2dot25);
+    @include paddingAxis("padding-x-2-5", null, $x2dot5, null, $x2dot5);
+    @include paddingAxis("padding-x-3", null, $x3, null, $x3);
+    @include paddingAxis("padding-x-4", null, $x4, null, $x4);
+    @include paddingAxis("padding-x-5", null, $x5, null, $x5);
+
+    //padding top and padding bottom
+    @include paddingAxis("padding-y-0", 0, null, 0, null);
+    @include paddingAxis("padding-y-0-25", $xdot25, null, $xdot25, null);
+    @include paddingAxis("padding-y-0-5", $xdot5, null, $xdot5, null);
+    @include paddingAxis("padding-y-0-75", $xdot75, null, $xdot75, null);
+    @include paddingAxis("padding-y-0-8", $xdot8, null, $xdot8, null);
+    @include paddingAxis("padding-y-1", $x1, null, $x1, null);
+    @include paddingAxis("padding-y-1-25", $x1dot25, null, $x1dot25, null);
+    @include paddingAxis("padding-y-1-5", $x1dot5, null, $x1dot5, null);
+    @include paddingAxis("padding-y-2", $x2, null, $x2, null);
+    @include paddingAxis("padding-y-2-25", $x2dot25, null, $x2dot25, null);
+    @include paddingAxis("padding-y-2-5", $x2dot5, null, $x2dot5, null);
+    @include paddingAxis("padding-y-3", $x3, null, $x3, null);
+    @include paddingAxis("padding-y-4", $x4, null, $x4, null);
+    @include paddingAxis("padding-y-5", $x5, null, $x5, null);
+
+    //padding top
+    @include paddingAxis("padding-top-0", 0, null, null, null);
+    @include paddingAxis("padding-top-0-25", $xdot25, null, null, null);
+    @include paddingAxis("padding-top-0-5", $xdot5, null, null, null);
+    @include paddingAxis("padding-top-0-75", $xdot75, null, null, null);
+    @include paddingAxis("padding-top-0-8", $xdot8, null, null, null);
+    @include paddingAxis("padding-top-1", $x1, null, null, null);
+    @include paddingAxis("padding-top-1-25", $x1dot25, null, null, null);
+    @include paddingAxis("padding-top-1-5", $x1dot5, null, null, null);
+    @include paddingAxis("padding-top-2", $x2, null, null, null);
+    @include paddingAxis("padding-top-2-25", $x2dot25, null, null, null);
+    @include paddingAxis("padding-top-2-5", $x2dot5, null, null, null);
+    @include paddingAxis("padding-top-3", $x3, null, null, null);
+    @include paddingAxis("padding-top-4", $x4, null, null, null);
+    @include paddingAxis("padding-top-5", $x5, null, null, null);
+
+    //padding bottom
+    @include paddingAxis("padding-bottom-0", null, null, 0, null);
+    @include paddingAxis("padding-bottom-0-25", null, null, $xdot25, null);
+    @include paddingAxis("padding-bottom-0-5", null, null, $xdot5, null);
+    @include paddingAxis("padding-bottom-0-75", null, null, $xdot75, null);
+    @include paddingAxis("padding-bottom-0-8", null, null, $xdot8, null);
+    @include paddingAxis("padding-bottom-1", null, null, $x1, null);
+    @include paddingAxis("padding-bottom-1-25", null, null, $x1dot25, null);
+    @include paddingAxis("padding-bottom-1-5", null, null, $x1dot5, null);
+    @include paddingAxis("padding-bottom-2", null, null, $x2, null);
+    @include paddingAxis("padding-bottom-2-25", null, null, $x2dot25, null);
+    @include paddingAxis("padding-bottom-2-5", null, null, $x2dot5, null);
+    @include paddingAxis("padding-bottom-3", null, null, $x3, null);
+    @include paddingAxis("padding-bottom-4", null, null, $x4, null);
+    @include paddingAxis("padding-bottom-5", null, null, $x5, null);
+
+    //padding left
+    @include paddingAxis("padding-left-0", null, 0, null, null);
+    @include paddingAxis("padding-left-0-25", null, $xdot25, null, null);
+    @include paddingAxis("padding-left-0-5", null, $xdot5, null, null);
+    @include paddingAxis("padding-left-0-75", null, $xdot75, null, null);
+    @include paddingAxis("padding-left-0-8", null, $xdot8, null, null);
+    @include paddingAxis("padding-left-1", null, $x1, null, null);
+    @include paddingAxis("padding-left-1-25", null, $x1dot25, null, null);
+    @include paddingAxis("padding-left-1-5", null, $x1dot5, null, null);
+    @include paddingAxis("padding-left-2", null, $x2, null, null);
+    @include paddingAxis("padding-left-2-25", null, $x2dot25, null, null);
+    @include paddingAxis("padding-left-2-5", null, $x2dot5, null, null);
+    @include paddingAxis("padding-left-3", null, $x3, null, null);
+    @include paddingAxis("padding-left-4", null, $x4, null, null);
+    @include paddingAxis("padding-left-5", null, $x5, null, null);
+
+    //padding right
+    @include paddingAxis("padding-right-0", null, null, null, 0);
+    @include paddingAxis("padding-right-0-25", null, null, null, $xdot25);
+    @include paddingAxis("padding-right-0-5", null, null, null, $xdot5);
+    @include paddingAxis("padding-right-0-75", null, null, null, $xdot75);
+    @include paddingAxis("padding-right-0-8", null, null, null, $xdot8);
+    @include paddingAxis("padding-right-1", null, null, null, $x1);
+    @include paddingAxis("padding-right-1-25", null, null, null, $x1dot25);
+    @include paddingAxis("padding-right-1-5", null, null, null, $x1dot5);
+    @include paddingAxis("padding-right-2", null, null, null, $x2);
+    @include paddingAxis("padding-right-2-25", null, null, null, $x2dot25);
+    @include paddingAxis("padding-right-2-5", null, null, null, $x2dot5);
+    @include paddingAxis("padding-right-3", null, null, null, $x3);
+    @include paddingAxis("padding-right-4", null, null, null, $x4);
+    @include paddingAxis("padding-right-5", null, null, null, $x5);
+
+
+    //===MARGIN ALL DIRECTION===//
+    @mixin margin ($name, $value) {
+        .margin-#{$name} {
+            margin: $value;
+        }
+    }
+
+    @include margin("0", 0);
+    @include margin("0-25", $xdot25);
+    @include margin("0-5", $xdot5);
+    @include margin("0-75", $xdot75);
+    @include margin("0-8", $xdot8);
+    @include margin("1", $x1);
+    @include margin("1-25", $x1dot25);
+    @include margin("1-5", $x1dot5);
+    @include margin("2", $x2);
+    @include margin("2-25", $x2dot25);
+    @include margin("2-5", $x2dot5);
+    @include margin("3", $x3);
+    @include margin("4", $x4);
+    @include margin("5", $x5);
+
+    //===MARGIN X & Y===//
+    @mixin marginAxis ($name, $top, $left, $bottom, $right) {
+        .#{$name} {
+            margin-top: $top;
+            margin-left: $left;
+            margin-bottom: $bottom;
+            margin-right: $right;
+        }
+    }
+
+    //margin left and margin right
+    @include marginAxis("margin-x-0", null, 0, null, 0);
+    @include marginAxis("margin-x-0-25", null, $xdot25, null, $xdot25);
+    @include marginAxis("margin-x-0-5", null, $xdot5, null, $xdot5);
+    @include marginAxis("margin-x-0-75", null, $xdot75, null, $xdot75);
+    @include marginAxis("margin-x-0-8", null, $xdot8, null, $xdot8);
+    @include marginAxis("margin-x-1", null, $x1, null, $x1);
+    @include marginAxis("margin-x-1-25", null, $x1dot25, null, $x1dot25);
+    @include marginAxis("margin-x-1-5", null, $x1dot5, null, $x1dot5);
+    @include marginAxis("margin-x-2", null, $x2, null, $x2);
+    @include marginAxis("margin-x-2-25", null, $x2dot25, null, $x2dot25);
+    @include marginAxis("margin-x-2-5", null, $x2dot5, null, $x2dot5);
+    @include marginAxis("margin-x-3", null, $x3, null, $x3);
+    @include marginAxis("margin-x-4", null, $x4, null, $x4);
+    @include marginAxis("margin-x-5", null, $x5, null, $x5);
+    @include marginAxis("margin-x-auto", 0, auto, 0, auto);
+
+    //margin top and margin bottom
+    @include marginAxis("margin-y-0", 0, null, 0, null);
+    @include marginAxis("margin-y-0-25", $xdot25, null, $xdot25, null);
+    @include marginAxis("margin-y-0-5", $xdot5, null, $xdot5, null);
+    @include marginAxis("margin-y-0-75", $xdot75, null, $xdot75, null);
+    @include marginAxis("margin-y-0-8", $xdot8, null, $xdot8, null);
+    @include marginAxis("margin-y-1", $x1, null, $x1, null);
+    @include marginAxis("margin-y-1-25", $x1dot25, null, $x1dot25, null);
+    @include marginAxis("margin-y-1-5", $x1dot5, null, $x1dot5, null);
+    @include marginAxis("margin-y-2", $x2, null, $x2, null);
+    @include marginAxis("margin-y-2-25", $x2dot25, null, $x2dot25, null);
+    @include marginAxis("margin-y-2-5", $x2dot5, null, $x2dot5, null);
+    @include marginAxis("margin-y-3", $x3, null, $x3, null);
+    @include marginAxis("margin-y-4", $x4, null, $x4, null);
+    @include marginAxis("margin-y-5", $x5, null, $x5, null);
+
+    //margin top
+    @include marginAxis("margin-top-0", 0, null, null, null);
+    @include marginAxis("margin-top-0-25", $xdot25, null, null, null);
+    @include marginAxis("margin-top-0-5", $xdot5, null, null, null);
+    @include marginAxis("margin-top-0-75", $xdot75, null, null, null);
+    @include marginAxis("margin-top-0-8", $xdot8, null, null, null);
+    @include marginAxis("margin-top-1", $x1, null, null, null);
+    @include marginAxis("margin-top-1-25", $x1dot25, null, null, null);
+    @include marginAxis("margin-top-1-5", $x1dot5, null, null, null);
+    @include marginAxis("margin-top-2", $x2, null, null, null);
+    @include marginAxis("margin-top-2-25", $x2dot25, null, null, null);
+    @include marginAxis("margin-top-2-5", $x2dot5, null, null, null);
+    @include marginAxis("margin-top-3", $x3, null, null, null);
+    @include marginAxis("margin-top-4", $x4, null, null, null);
+    @include marginAxis("margin-top-5", $x5, null, null, null);
+
+    //margin bottom
+    @include marginAxis("margin-bottom-0", null, null, 0, null);
+    @include marginAxis("margin-bottom-0-25", null, null, $xdot25, null);
+    @include marginAxis("margin-bottom-0-5", null, null, $xdot5, null);
+    @include marginAxis("margin-bottom-0-75", null, null, $xdot75, null);
+    @include marginAxis("margin-bottom-0-8", null, null, $xdot8, null);
+    @include marginAxis("margin-bottom-1", null, null, $x1, null);
+    @include marginAxis("margin-bottom-1-25", null, null, $x1dot25, null);
+    @include marginAxis("margin-bottom-1-5", null, null, $x1dot5, null);
+    @include marginAxis("margin-bottom-2", null, null, $x2, null);
+    @include marginAxis("margin-bottom-2-25", null, null, $x2dot25, null);
+    @include marginAxis("margin-bottom-2-5", null, null, $x2dot5, null);
+    @include marginAxis("margin-bottom-3", null, null, $x3, null);
+    @include marginAxis("margin-bottom-4", null, null, $x4, null);
+    @include marginAxis("margin-bottom-5", null, null, $x5, null);
+
+    //margin left
+    @include marginAxis("margin-left-0", null, 0, null, null);
+    @include marginAxis("margin-left-0-25", null, $xdot25, null, null);
+    @include marginAxis("margin-left-0-5", null, $xdot5, null, null);
+    @include marginAxis("margin-left-0-75", null, $xdot75, null, null);
+    @include marginAxis("margin-left-0-8", null, $xdot8, null, null);
+    @include marginAxis("margin-left-1", null, $x1, null, null);
+    @include marginAxis("margin-left-1-25", null, $x1dot25, null, null);
+    @include marginAxis("margin-left-1-5", null, $x1dot5, null, null);
+    @include marginAxis("margin-left-2", null, $x2, null, null);
+    @include marginAxis("margin-left-2-25", null, $x2dot25, null, null);
+    @include marginAxis("margin-left-2-5", null, $x2dot5, null, null);
+    @include marginAxis("margin-left-3", null, $x3, null, null);
+    @include marginAxis("margin-left-4", null, $x4, null, null);
+    @include marginAxis("margin-left-5", null, $x5, null, null);
+
+    //margin right
+    @include marginAxis("margin-right-0", null, null, null, 0);
+    @include marginAxis("margin-right-0-25", null, null, null, $xdot25);
+    @include marginAxis("margin-right-0-5", null, null, null, $xdot5);
+    @include marginAxis("margin-right-0-75", null, null, null, $xdot75);
+    @include marginAxis("margin-right-0-8", null, null, null, $xdot8);
+    @include marginAxis("margin-right-1", null, null, null, $x1);
+    @include marginAxis("margin-right-1-25", null, null, null, $x1dot25);
+    @include marginAxis("margin-right-1-5", null, null, null, $x1dot5);
+    @include marginAxis("margin-right-2", null, null, null, $x2);
+    @include marginAxis("margin-right-2-25", null, null, null, $x2dot25);
+    @include marginAxis("margin-right-2-5", null, null, null, $x2dot5);
+    @include marginAxis("margin-right-3", null, null, null, $x3);
+    @include marginAxis("margin-right-4", null, null, null, $x4);
+    @include marginAxis("margin-right-5", null, null, null, $x5);
+
+//==============================================================
+
+//SINDEX | SCM-SIZE
+
+//==============================================================
+// Universal Size  
+//--------------------------------------------------------------
+
+    //===WIDTH===//
+    @mixin width ($name, $value) {
+        .w-#{$name} {
+            width: $value;
+        }
+    }
+
+    //static width
+    @include width("0", 0);
+    @include width("0-25", $xdot25);
+    @include width("0-5", $xdot5);
+    @include width("0-75", $xdot75);
+    @include width("0-8", $xdot8);
+    @include width("1", $x1);
+    @include width("1-25", $x1dot25);
+    @include width("1-5", $x1dot5);
+    @include width("2", $x2);
+    @include width("2-25", $x2dot25);
+    @include width("2-5", $x2dot5);
+    @include width("3", $x3);
+    @include width("4", $x4);
+    @include width("5", $x5);
+    @include width("100p", 100%);
+    @include width("100vw", 100vw);
+
+    //dynamic width
+    @mixin dynamicWidth($name, $dividend, $divisor) {
+        .w-#{$name} {
+            width: ($dividend / $divisor) * 100%;
+        }
+    }
+
+    @include dynamicWidth("1d2", 1, 2);
+    @include dynamicWidth("1d3", 1, 3);
+    @include dynamicWidth("2d3", 2, 3);
+    @include dynamicWidth("1d4", 1, 4);
+    @include dynamicWidth("2d4", 2, 4);
+    @include dynamicWidth("3d4", 3, 4);
+    @include dynamicWidth("1d5", 1, 5);
+    @include dynamicWidth("2d5", 2, 5);
+    @include dynamicWidth("3d5", 3, 5);
+    @include dynamicWidth("4d5", 4, 5);
+    @include dynamicWidth("1d6", 1, 6);
+    @include dynamicWidth("2d6", 2, 6);
+    @include dynamicWidth("3d6", 3, 6);
+    @include dynamicWidth("4d6", 4, 6);
+    @include dynamicWidth("5d6", 5, 6);
+    @include dynamicWidth("1d12", 1, 12);
+    @include dynamicWidth("2d12", 2, 12);
+    @include dynamicWidth("3d12", 3, 12);
+    @include dynamicWidth("4d12", 4, 12);
+    @include dynamicWidth("5d12", 5, 12);
+    @include dynamicWidth("6d12", 6, 12);
+    @include dynamicWidth("7d12", 7, 12);
+    @include dynamicWidth("8d12", 8, 12);
+    @include dynamicWidth("9d12", 9, 12);
+    @include dynamicWidth("10d12", 10, 12);
+    @include dynamicWidth("11d12", 11, 12);
+
+
+    //===HEIGHT===//
+    @mixin height ($name, $value) {
+        .h-#{$name} {
+            height: $value;
+        }
+    }
+
+    //static width
+    @include height("0", 0);
+    @include height("0-25", $xdot25);
+    @include height("0-5", $xdot5);
+    @include height("0-75", $xdot75);
+    @include height("0-8", $xdot8);
+    @include height("1", $x1);
+    @include height("1-25", $x1dot25);
+    @include height("1-5", $x1dot5);
+    @include height("2", $x2);
+    @include height("2-25", $x2dot25);
+    @include height("2-5", $x2dot5);
+    @include height("3", $x3);
+    @include height("4", $x4);
+    @include height("5", $x5);
+    @include height("100p", 100%);
+    @include height("100vh", 100vh);
+
+    //dynamic width
+    @mixin dynamicHeight($name, $dividend, $divisor) {
+        .h-#{$name} {
+            width: ($dividend / $divisor) * 100%;
+        }
+    }
+
+    @include dynamicHeight("1d2", 1, 2);
+    @include dynamicHeight("1d3", 1, 3);
+    @include dynamicHeight("2d3", 2, 3);
+    @include dynamicHeight("1d4", 1, 4);
+    @include dynamicHeight("2d4", 2, 4);
+    @include dynamicHeight("3d4", 3, 4);
+    @include dynamicHeight("1d5", 1, 5);
+    @include dynamicHeight("2d5", 2, 5);
+    @include dynamicHeight("3d5", 3, 5);
+    @include dynamicHeight("4d5", 4, 5);
+    @include dynamicHeight("1d6", 1, 6);
+    @include dynamicHeight("2d6", 2, 6);
+    @include dynamicHeight("3d6", 3, 6);
+    @include dynamicHeight("4d6", 4, 6);
+    @include dynamicHeight("5d6", 5, 6);
+    @include dynamicHeight("1d12", 1, 12);
+    @include dynamicHeight("2d12", 2, 12);
+    @include dynamicHeight("3d12", 3, 12);
+    @include dynamicHeight("4d12", 4, 12);
+    @include dynamicHeight("5d12", 5, 12);
+    @include dynamicHeight("6d12", 6, 12);
+    @include dynamicHeight("7d12", 7, 12);
+    @include dynamicHeight("8d12", 8, 12);
+    @include dynamicHeight("9d12", 9, 12);
+    @include dynamicHeight("10d12", 10, 12);
+    @include dynamicHeight("11d12", 11, 12);
+
+//==============================================================
+
+//SINDEX | SCM-LINE-HEIGHT
+
+//==============================================================
+// Universal Line Height 
+//--------------------------------------------------------------
+
+@mixin lineHight ($name, $value) {
+    .line-height-#{$name} {
+        line-height: $value;
+    }
+}
+
+@include lineHight("xs", 1.2);
+@include lineHight("sm", 1.375);
+@include lineHight("normal", 1.5);
+@include lineHight("med", 1.725);
+@include lineHight("lg", 2);
+
+@include lineHight("1", $x1);
+@include lineHight("1-25", $x1dot25);
+@include lineHight("1-5", $x1dot5);
+@include lineHight("2", $x2);
+@include lineHight("2-25", $x2dot25);
+@include lineHight("2-5", $x2dot5);
+@include lineHight("3", $x3);
+@include lineHight("4", $x4);
+@include lineHight("5", $x5);
+
+//==============================================================
+
+//SINDEX | SCM-LIST
+
+//==============================================================
+// Universal List 
+//--------------------------------------------------------------
+
+@mixin list ($name, $value, $position) {
+    .list-style-#{$name} {
+        list-style-type: $value;
+        list-style-position: $position;
+    }
+}
+
+@include list("none", none, null);
+@include list("disc", disc, null);
+@include list("decimal", decimal, null);
+//position
+@include list("inner", null, inside);
+@include list("outer", null, outside);
+
+//==============================================================
+
+//SINDEX | SCM-VERTICAL-ALIGNMENT
+
+//==============================================================
+// Universal Vertical Alignment 
+//--------------------------------------------------------------
+
+@mixin vertAlign ($name, $value) {
+    .vertical-al-#{$name} {
+        vertical-align: $value;
+    }
+}
+
+@include vertAlign("baseline", baseline);
+@include vertAlign("top", top);
+@include vertAlign("bottom", bottom);
+@include vertAlign("middle", middle);
+
+//==============================================================
+
+//SINDEX | SCM-WHITE-SPACE
+
+//==============================================================
+// Universal White Space 
+//--------------------------------------------------------------
+
+@mixin whiteSpace ($name, $value) {
+    .white-space-#{$name} {
+        white-space: $value;
+    }
+}
+
+@include whiteSpace("normal", normal);
+@include whiteSpace("nowrap", nowrap);
+@include whiteSpace("pre", pre);
+@include whiteSpace("preline", pre-line);
+@include whiteSpace("prewrap", pre-wrap);
+
+//==============================================================
+
+//SINDEX | SCM-BORDER
+
+//==============================================================
+// Universal Border 
+//--------------------------------------------------------------
+
+@mixin border ($name, $style, $width, $radius) {
+    .border-#{$name} {
+        border-style: $style;
+        border-width: $width;
+        border-radius: $radius;
+    }
+}
+
+@include border("0", null, 0, null);
+@include border("radius-0", null, null, 0);
+//solid
+@include border("1-solid", solid, 1px, null);
+@include border("2-solid", solid, 2px, null);
+@include border("3-solid", solid, 3px, null);
+@include border("4-solid", solid, 4px, null);
+@include border("5-solid", solid, 5px, null);
+//dashed
+@include border("1-dashed", dashed, 1px, null);
+@include border("2-dashed", dashed, 2px, null);
+@include border("3-dashed", dashed, 3px, null);
+@include border("4-dashed", dashed, 4px, null);
+@include border("5-dashed", dashed, 5px, null);
+//dotted
+@include border("1-dotted", dotted, 1px, null);
+@include border("2-dotted", dotted, 2px, null);
+@include border("3-dotted", dotted, 3px, null);
+@include border("4-dotted", dotted, 4px, null);
+@include border("5-dotted", dotted, 5px, null);
+//radius
+@include border("radius-sm", null, null, .25rem);
+@include border("radius-med", null, null, .75rem);
+@include border("radius-lg", null, null, 2rem);
+@include border("radius-normal", null, null, 1rem);
+@include border("radius-circle", null, null, 50%);
+
+//==============================================================
+
+//SINDEX | SCM-BACKGROUND
+
+//==============================================================
+// Universal Background 
+//--------------------------------------------------------------
+
+@mixin background ($name, $size, $position, $repeat, $attachment) {
+    .bg-#{$name} {
+        background-size: $size;
+        background-position: $position;
+        background-repeat: $repeat;
+        background-attachment: $attachment;
+    }
+}
+
+@include background("center-cover", cover, center, no-repeat, null);
+@include background("center-cover-fixed", cover, center, no-repeat, fixed);
+
+//==============================================================
+
+//SINDEX | SCM-BACKGROUND-COLOR
+
+//==============================================================
+// Universal Background Color
+//--------------------------------------------------------------
+
+@mixin backgroundColor ($name, $color) {
+    .bg-#{$name} {
+        background-color: $color !important;
+    }
+}
+
+//red
+@include backgroundColor("red-1", #FFF5F5);
+@include backgroundColor("red-2", #FED7D7);
+@include backgroundColor("red-3", #FEB2B2);
+@include backgroundColor("red-4", #FC8181);
+@include backgroundColor("red-5", #F56565);
+@include backgroundColor("red-6", #E53E3E);
+@include backgroundColor("red-7", #C53030);
+@include backgroundColor("red-8", #9B2C2C);
+@include backgroundColor("red-9", #742A2A);
+
+//pink
+@include backgroundColor("pink-1", #FFF5F7);
+@include backgroundColor("pink-2", #FED7E2);
+@include backgroundColor("pink-3", #FBB6CE);
+@include backgroundColor("pink-4", #F687B3);
+@include backgroundColor("pink-5", #ED64A6);
+@include backgroundColor("pink-6", #D53F8C);
+@include backgroundColor("pink-7", #B83280);
+@include backgroundColor("pink-8", #97266D);
+@include backgroundColor("pink-9", #702459);
+
+//purple
+@include backgroundColor("purple-1", #FAF5FF);
+@include backgroundColor("purple-2", #FED7E2);
+@include backgroundColor("purple-3", #E9D8FD);
+@include backgroundColor("purple-4", #B794F4);
+@include backgroundColor("purple-5", #9F7AEA);
+@include backgroundColor("purple-6", #805AD5);
+@include backgroundColor("purple-7", #6B46C1);
+@include backgroundColor("purple-8", #553C9A);
+@include backgroundColor("purple-9", #44337A);
+
+//blue
+@include backgroundColor("blue-1", #EBF8FF);
+@include backgroundColor("blue-2", #BEE3F8);
+@include backgroundColor("blue-3", #90CDF4);
+@include backgroundColor("blue-4", #63B3ED);
+@include backgroundColor("blue-5", #4299E1);
+@include backgroundColor("blue-6", #3182CE);
+@include backgroundColor("blue-7", #2B6CB0);
+@include backgroundColor("blue-8", #2C5282);
+@include backgroundColor("blue-9", #2A4365);
+
+//green
+@include backgroundColor("green-1", #F0FFF4);
+@include backgroundColor("green-2", #C6F6D5);
+@include backgroundColor("green-3", #9AE6B4);
+@include backgroundColor("green-4", #68D391);
+@include backgroundColor("green-5", #48BB78);
+@include backgroundColor("green-6", #38A169);
+@include backgroundColor("green-7", #2F855A);
+@include backgroundColor("green-8", #276749);
+@include backgroundColor("green-9", #22543D);
+
+//yellow
+@include backgroundColor("yellow-1", #FFFFF0);
+@include backgroundColor("yellow-2", #FEFCBF);
+@include backgroundColor("yellow-3", #FAF089);
+@include backgroundColor("yellow-4", #F6E05E);
+@include backgroundColor("yellow-5", #ECC94B);
+@include backgroundColor("yellow-6", #D69E2E);
+@include backgroundColor("yellow-7", #B7791F);
+@include backgroundColor("yellow-8", #975A16);
+@include backgroundColor("yellow-9", #744210);
+
+//teal
+@include backgroundColor("teal-1", #E6FFFA);
+@include backgroundColor("teal-2", #B2F5EA);
+@include backgroundColor("teal-3", #81E6D9);
+@include backgroundColor("teal-4", #4FD1C5);
+@include backgroundColor("teal-5", #38B2AC);
+@include backgroundColor("teal-6", #319795);
+@include backgroundColor("teal-7", #2C7A7B);
+@include backgroundColor("teal-8", #285E61);
+@include backgroundColor("teal-9", #234E52);
+
+//indigo
+@include backgroundColor("indigo-1", #EBF4FF);
+@include backgroundColor("indigo-2", #C3DAFE);
+@include backgroundColor("indigo-3", #A3BFFA);
+@include backgroundColor("indigo-4", #7F9CF5);
+@include backgroundColor("indigo-5", #667EEA);
+@include backgroundColor("indigo-6", #5A67D8);
+@include backgroundColor("indigo-7", #4C51BF);
+@include backgroundColor("indigo-8", #4C51BF);
+@include backgroundColor("indigo-9", #3C366B);
+
+//orange
+@include backgroundColor("orange-1", #FFFAF0);
+@include backgroundColor("orange-2", #FEEBC8);
+@include backgroundColor("orange-3", #FBD38D);
+@include backgroundColor("orange-4", #F6AD55);
+@include backgroundColor("orange-5", #ED8936);
+@include backgroundColor("orange-6", #DD6B20);
+@include backgroundColor("orange-7", #C05621);
+@include backgroundColor("orange-8", #9C4221);
+@include backgroundColor("orange-9", #7B341E);
+
+//grey
+@include backgroundColor("grey-1", #F7FAFC);
+@include backgroundColor("grey-2", #EDF2F7);
+@include backgroundColor("grey-3", #E2E8F0);
+@include backgroundColor("grey-4", #CBD5E0);
+@include backgroundColor("grey-5", #A0AEC0);
+@include backgroundColor("grey-6", #718096);
+@include backgroundColor("grey-7", #4A5568);
+@include backgroundColor("grey-8", #2D3748);
+@include backgroundColor("grey-9", #1A202C);
+
+//white
+@include backgroundColor("white-1", #FFF);
+@include backgroundColor("white-2", #F2F2F2);
+@include backgroundColor("white-3", #F3F3F3);
+@include backgroundColor("white-4", #F4F4F4);
+@include backgroundColor("white-5", #F5F5F5);
+@include backgroundColor("white-6", #F6F6F6);
+@include backgroundColor("white-7", #F7F7F7);
+@include backgroundColor("white-8", #F8F8F8);
+@include backgroundColor("white-9", #F9F9F9);
+
+//==============================================================
+
+//SINDEX | SCM-CURSOR
+
+//==============================================================
+// Cursors
+//--------------------------------------------------------------
+
+@mixin cursor($name, $type) {
+    .cursor-#{$name} {
+        cursor: $type;
+    }
+}
+
+@include cursor("pointer", pointer);
+
+
+//==============================================================
+
+//SINDEX | SCM-CUSTOMIZED-CLASS
+
+//==============================================================
+// Customized Classes
+//--------------------------------------------------------------
+
+//fixed nav
+.fixed-nav{
+    @extend .position-fixed;
+    @extend .z-999;
+    @extend .w-100p;
+    @extend .top-0;
+}
+
+//responsive padding boxes
+
+//default square box
+.outer {
+    position: relative;
+    &:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: (1 / 1) * 100%;
+    }
+
+    > .inner {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+}
+
+
+
+//list
+ul{
+    @extend .padding-x-1;
+    @extend .list-style-none;
+}
+
+ul li{
+    @extend .margin-bottom-0-5;
+}
+
+
+//img
+.coverImg{
+    @extend %coverImg;
+}
+
+//preloader
+
+#master_loading {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: block;
+    background-color: $primaryColor;
+    z-index: 1300;
+    text-align: center;
+
+    & #loading-image{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        grid-row-gap: 1.5rem;
+
+        > .shapeshifter {
+            animation-duration: 2500ms;
+            animation-timing-function: steps(150);
+            width: 150px;
+            height: 150px;
+            background-repeat: no-repeat;
+            animation-iteration-count: infinite;
+        }
+
+        > .play {
+            animation-name: play150;
+        }
+    }
+
+    @keyframes play150 {
+        0% {
+            background-position: 0px 0px;
+        }
+        100% {
+            background-position: -22500px 0px;
+        }
+    }
+      
+      
+}
+
+
+
+//==============================================================

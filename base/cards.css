@@ -1,0 +1,170 @@
+.card-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-column-gap: 3rem;
+  grid-row-gap: 3rem;
+  justify-items: center;
+  padding: 2rem;
+  background-color: #002441;
+}
+
+.card-container .card {
+  max-width: 320px;
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: #eeeeee;
+}
+
+.card-container .card-img {
+  max-height: 230px;
+}
+
+.card-container .card-content {
+  padding: 1rem 2rem;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  grid-row-gap: 1rem;
+}
+
+.card-container a {
+  background-color: #002885;
+  color: #CB986C;
+}
+
+.square-cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-column-gap: 3rem;
+  grid-row-gap: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.square-cards .square-card .inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2rem;
+}
+
+.price-cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-column-gap: 3rem;
+  grid-row-gap: calc(160px + 1rem);
+}
+
+.price-cards .outer::before {
+  padding-top: 106.29213%;
+}
+
+.price-cards .cards {
+  border-top: 1.5rem solid #CB986C;
+  background-color: #eeeeee;
+}
+
+.price-cards .cards .card-title {
+  border-bottom: 5px solid #fff;
+  position: relative;
+  margin-bottom: 0;
+}
+
+.price-cards .cards .card-title > h3 {
+  padding: 2rem;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 1601px) {
+  .price-cards .cards .card-title > h3 {
+    padding: 3rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.price-cards .cards .card-title > span {
+  text-transform: uppercase;
+  background-color: #CB986C;
+  padding: .5rem 1rem;
+  color: white;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.price-cards .cards .card-content {
+  padding: 2rem;
+  padding-top: .5rem;
+  padding-bottom: 4rem;
+}
+
+.price-cards .cards .card-content > h3 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 1601px) {
+  .price-cards .cards .card-content {
+    padding: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.price-cards .cards .card-btn {
+  position: absolute;
+  background: #fff;
+  padding: 2rem;
+  display: table;
+  top: calc(100% - 2rem);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.price-cards .cards .card-btn > div:nth-child(1) {
+  margin-bottom: 2rem;
+}
+
+.price-cards .cards .card-btn > div > a {
+  text-transform: uppercase;
+}
+
+.team-cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(225px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  text-align: center;
+}
+
+.team-cards .team-card .card-title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #CB986C;
+}
+
+.team-cards .team-card .card-position {
+  color: #fff;
+  font-size: 1.2rem;
+}
+/*# sourceMappingURL=cards.css.map */

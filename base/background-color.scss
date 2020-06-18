@@ -1,0 +1,10 @@
+@import "color";
+
+@mixin mainBgColor($thirdColor) {
+    .main, .body{
+        background-color: $thirdColor;
+    }
+    
+}
+
+@include mainBgColor($thirdColor);
